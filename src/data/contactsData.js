@@ -1,7 +1,17 @@
 import { v4 as uuidv4 } from 'uuid';
 
 export const contactsSortBy = [
-
+	{ key: 'none', label: (<div>None</div>), value: 'None' },
+	{ key: 'contactName', label: (<div>Contact name</div>), value: 'Contact name' },
+	{ key: 'firstName', label: (<div>First name</div>), value: 'First name' },
+	{ key: 'lastName', label: (<div>Last name</div>), value: 'Last name' },
+	{ key: 'contactOwner', label: (<div>Contact owner</div>), value: 'Contact owner' },
+	{ key: 'createdTime', label: (<div>Created time</div>), value: 'Created time' },
+	{ key: 'email', label: (<div>Email</div>), value: 'Email' },
+	{ key: 'website', label: (<div>Website</div>), value: 'Website' },
+	{ key: 'phone', label: (<div>Phone</div>), value: 'Phone' },
+	{ key: 'title', label: (<div>Title</div>), value: 'Title' },
+	{ key: 'leadSource', label: (<div>Lead source</div>), value: 'Lead source' },
 ];
 
 const leadSourceOptions = [

@@ -2,9 +2,7 @@
 import { Button, List, Select } from 'antd';
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
-import { leadsSortBy } from '../../data/leadsData';
-import { accountsData, accountsSortBy } from '../../data/accountsData';
+import { accountsSortBy } from '../../data/accountsData';
 import AccountsListItem from './AccountsListItem';
 
 const Accounts = () => {
@@ -38,11 +36,10 @@ const Accounts = () => {
 		}
 		
 		if (sortOrder === 'ascend') {
-			return a[sortByKey]?.localeCompare(b[sortByKey]);
+			return a[sortByKey]?.toLowerCase().localeCompare(b[sortByKey]?.toLowerCase());
 		} else {
-			return b[sortByKey]?.localeCompare(a[sortByKey]);
+			return b[sortByKey]?.toLowerCase().localeCompare(a[sortByKey]?.toLowerCase());
 		}
-
 	});
 	
 	return (

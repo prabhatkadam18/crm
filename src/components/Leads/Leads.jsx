@@ -25,7 +25,7 @@ const Leads = () => {
 		localStorage.setItem('leads', JSON.stringify([]));
 	}
 
-	const data = [...addedLeads, ...leadsData];
+	const data = [...addedLeads];
 
 	const sortedData = data.sort((a, b) => {
 		if (sortByKey === 'none') return 0;
